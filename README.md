@@ -12,5 +12,8 @@ Project ini berisi pengujian otomatis menggunakan Katalon Studio:
 ## Pre Conditions
 Sebelum menjalankan Test Suite, pastikan koneksi ke API dan Kafka aktif
 
+## Report API
+[Klik di sini untuk mengunduh laporan API](Reports/20250924_172200/API_Suite/20250924_172200/20250924_172200.html)
+
 ## Author
 Suhendar - SQA
