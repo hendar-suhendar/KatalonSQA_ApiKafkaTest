@@ -14,8 +14,9 @@ Sebelum menjalankan Test Suite, pastikan koneksi ke API dan Kafka aktif
 
 ## Report API
 <a href="Reports/20250924_172200/API_Suite/20250924_172200/20250924_172200.pdf" download>
-Laporan
+Lihat laporan PDF
 </a>
+
 
 
 
