@@ -1,8 +1,8 @@
 # KatalonSQA_APIKafkaTest
 
 Project ini berisi pengujian otomatis menggunakan Katalon Studio:  
-(-) Restful API : Katalon sebagai producer dan consumer  
-(-) Kafka : Katalon sebagai consumer
+(-) Restful API : Sebagai producer dan consumer  
+(-) Kafka : Sebagai consumer
 
 ## Structure
 (-) Test Cases : Berisi skrip pengujian  
