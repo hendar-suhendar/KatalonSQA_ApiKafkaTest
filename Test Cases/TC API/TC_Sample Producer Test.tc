@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Sample Producer Test</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>84ea73f0-d5d6-47ce-a85e-de5f47b5b2ca</testCaseGuid>
+</TestCaseEntity>

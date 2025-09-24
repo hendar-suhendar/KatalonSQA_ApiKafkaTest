@@ -1,0 +1,185 @@
+Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook
+Picked up _JAVA_OPTIONS: -Xrunjvmhook -Xbootclasspath/a:"C:\Program Files (x86)\OpenText\UFT One\bin\java_shared\classes\jasmine.jar"
+Picked up JAVA_TOOL_OPTIONS: -agentlib:jvmhook
+Picked up _JAVA_OPTIONS: 
+2025-09-24 17:22:08.805 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/API_Suite
+2025-09-24 17:22:09.056 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = suhendar
+2025-09-24 17:22:09.147 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = KatalonSQA_ApiKafkaTest
+2025-09-24 17:22:09.200 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = Suhendar-PC - DESKTOP-0GKMVGL
+2025-09-24 17:22:09.228 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2025-09-24 17:22:09.256 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 192.168.1.5
+2025-09-24 17:22:09.312 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.3.0.0
+2025-09-24 17:22:10.809 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-24 17:22:10.809 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC API/TC_Sample Cunsomer Test
+2025-09-24 17:22:11.043 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) name = Tonny Wijaya
+2025-09-24 17:22:11.090 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) gender = male
+2025-09-24 17:22:11.160 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) email = tonny.wijaya.4721@mail.com
+2025-09-24 17:22:11.207 INFO  c.k.katalon.core.main.TestCaseExecutor   - (Default) status = active
+2025-09-24 17:22:12.027 DEBUG testcase.TC_Sample Cunsomer Test         - 1: timestamp = System.currentTimeMillis()
+2025-09-24 17:22:12.061 DEBUG testcase.TC_Sample Cunsomer Test         - 2: nameList = ["Tonny Wijaya", "Dewi Lestari", "Budi Santoso", "Siti Aminah"]
+2025-09-24 17:22:12.089 DEBUG testcase.TC_Sample Cunsomer Test         - 3: genderList = ["male", "female"]
+2025-09-24 17:22:12.094 DEBUG testcase.TC_Sample Cunsomer Test         - 4: name = nameList[Random().nextInt(nameList.size())]
+2025-09-24 17:22:12.177 DEBUG testcase.TC_Sample Cunsomer Test         - 5: gender = genderList[Random().nextInt(genderList.size())]
+2025-09-24 17:22:12.195 DEBUG testcase.TC_Sample Cunsomer Test         - 6: email = toLowerCase().replaceAll(" ", ".") + "." + timestamp + "@mail.com"
+2025-09-24 17:22:12.243 DEBUG testcase.TC_Sample Cunsomer Test         - 7: status = "active"
+2025-09-24 17:22:12.265 DEBUG testcase.TC_Sample Cunsomer Test         - 8: payload = ["name":name, "gender":gender, "email":email, "status":status]
+2025-09-24 17:22:12.270 DEBUG testcase.TC_Sample Cunsomer Test         - 9: jsonBody = JsonOutput.toJson(payload)
+2025-09-24 17:22:12.393 DEBUG testcase.TC_Sample Cunsomer Test         - 10: postUserObj = findTestObject("Object Repository/API_Endpoints/Post User")
+2025-09-24 17:22:12.592 DEBUG testcase.TC_Sample Cunsomer Test         - 11: postUserObj.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(jsonBody, UTF-8, application/json))
+2025-09-24 17:22:12.692 DEBUG testcase.TC_Sample Cunsomer Test         - 12: response = sendRequest(postUserObj)
+2025-09-24 17:22:15.628 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Suhendar-PC\Katalon Studio\KatalonSQA_ApiKafkaTest\Reports\20250924_172200\API_Suite\20250924_172200\requests\main\Post-User_0.har
+2025-09-24 17:22:15.812 DEBUG testcase.TC_Sample Cunsomer Test         - 13: verifyResponseStatusCode(response, 201)
+2025-09-24 17:22:15.844 DEBUG testcase.TC_Sample Cunsomer Test         - 14: println(User created: $name | $email | $gender)
+User created: Tonny Wijaya | tonny.wijaya.1758709332061@mail.com | female
+2025-09-24 17:22:15.934 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC API/TC_Sample Cunsomer Test
+2025-09-24 17:22:15.981 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-24 17:22:15.982 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC API/TC_Sample Producer Test
+2025-09-24 17:22:16.493 DEBUG testcase.TC_Sample Producer Test         - 1: getUserObj = findTestObject("Object Repository/API_Endpoints/List User")
+2025-09-24 17:22:16.778 DEBUG testcase.TC_Sample Producer Test         - 2: response = sendRequest(getUserObj)
+2025-09-24 17:22:16.995 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Suhendar-PC\Katalon Studio\KatalonSQA_ApiKafkaTest\Reports\20250924_172200\API_Suite\20250924_172200\requests\main\List-User_1.har
+2025-09-24 17:22:17.019 DEBUG testcase.TC_Sample Producer Test         - 3: verifyResponseStatusCode(response, 200)
+2025-09-24 17:22:17.036 DEBUG testcase.TC_Sample Producer Test         - 4: actualUsers = JsonSlurper().parseText(response.getResponseText())
+2025-09-24 17:22:17.093 DEBUG testcase.TC_Sample Producer Test         - 5: expectedUsers = [["id":8145378, "name":"Rep. Tejas Kaniyar", "email":"rep_kaniyar_tejas@legros.example", "gender":"male", "status":"inactive"], ["id":8145377, "name":"Shwet Devar", "email":"devar_shwet@schaden.test", "gender":"female", "status":"active"], ["id":8145376, "name":"Rakesh Bhattacharya PhD", "email":"bhattacharya_phd_rakesh@kunde-runolfsdottir.test", "gender":"male", ... ], ["id":8145375, "name":"Amritambu Banerjee DDS", "email":"banerjee_amritambu_dds@fadel-lang.test", "gender":"female", "status":"active"], ["id":8145374, "name":"Adityanandana Mehrotra", "email":"adityanandana_mehrotra@kozey.example", "gender":"female", "status":"active"], ["id":8145373, "name":"Anish Shah", "email":"anish_shah@cremin.example", "gender":"female", "status":"inactive"], ["id":8145372, "name":"Miss Jagdeep Bhattacharya", "email":"bhattacharya_miss_jagdeep@kunze.example", "gender":"female", "status":"inactive"], ["id":8145371, "name":"Tej Malik", "email":"malik_tej@rowe.example", "gender":"male", "status":"inactive"], ["id":8145370, "name":"Trisha Marar", "email":"trisha_marar@deckow-cartwright.example", "gender":"male", "status":"inactive"], ["id":8145369, "name":"Durga Johar", "email":"johar_durga@olson.example", "gender":"male", "status":"active"]]
+2025-09-24 17:22:17.096 DEBUG testcase.TC_Sample Producer Test         - 6: for ([i = 0, i < expectedUsers.size(), (i++)])
+2025-09-24 17:22:17.107 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:17.125 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:16.778 DEBUG testcase.TC_Sample Producer Test         - 2: response = sendRequest(getUserObj)
+2025-09-24 17:22:16.995 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Suhendar-PC\Katalon Studio\KatalonSQA_ApiKafkaTest\Reports\20250924_172200\API_Suite\20250924_172200\requests\main\List-User_1.har
+2025-09-24 17:22:17.019 DEBUG testcase.TC_Sample Producer Test         - 3: verifyResponseStatusCode(response, 200)
+2025-09-24 17:22:17.036 DEBUG testcase.TC_Sample Producer Test         - 4: actualUsers = JsonSlurper().parseText(response.getResponseText())
+2025-09-24 17:22:17.093 DEBUG testcase.TC_Sample Producer Test         - 5: expectedUsers = [["id":8145378, "name":"Rep. Tejas Kaniyar", "email":"rep_kaniyar_tejas@legros.example", "gender":"male", "status":"inactive"], ["id":8145377, "name":"Shwet Devar", "email":"devar_shwet@schaden.test", "gender":"female", "status":"active"], ["id":8145376, "name":"Rakesh Bhattacharya PhD", "email":"bhattacharya_phd_rakesh@kunde-runolfsdottir.test", "gender":"male", ... ], ["id":8145375, "name":"Amritambu Banerjee DDS", "email":"banerjee_amritambu_dds@fadel-lang.test", "gender":"female", "status":"active"], ["id":8145374, "name":"Adityanandana Mehrotra", "email":"adityanandana_mehrotra@kozey.example", "gender":"female", "status":"active"], ["id":8145373, "name":"Anish Shah", "email":"anish_shah@cremin.example", "gender":"female", "status":"inactive"], ["id":8145372, "name":"Miss Jagdeep Bhattacharya", "email":"bhattacharya_miss_jagdeep@kunze.example", "gender":"female", "status":"inactive"], ["id":8145371, "name":"Tej Malik", "email":"malik_tej@rowe.example", "gender":"male", "status":"inactive"], ["id":8145370, "name":"Trisha Marar", "email":"trisha_marar@deckow-cartwright.example", "gender":"male", "status":"inactive"], ["id":8145369, "name":"Durga Johar", "email":"johar_durga@olson.example", "gender":"male", "status":"active"]]
+2025-09-24 17:22:17.096 DEBUG testcase.TC_Sample Producer Test         - 6: for ([i = 0, i < expectedUsers.size(), (i++)])
+2025-09-24 17:22:17.107 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:17.125 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:17.160 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:17.177 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:17.177 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:17.194 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:17.213 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:17.234 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Rep. Tejas Kaniyar (rep_kaniyar_tejas@legros.example)
+2025-09-24 17:22:17.245 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:17.271 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:17.292 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:17.306 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:17.347 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:17.402 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:17.412 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:17.420 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Shwet Devar (devar_shwet@schaden.test)
+2025-09-24 17:22:17.435 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:17.479 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:17.522 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:17.555 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:17.582 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:17.602 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:17.630 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:17.690 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Rakesh Bhattacharya PhD (bhattacharya_phd_rakesh@kunde-runolfsdottir.test)
+2025-09-24 17:22:17.721 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:17.741 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:17.790 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:17.831 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:17.855 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:17.863 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:17.946 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:17.991 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Amritambu Banerjee DDS (banerjee_amritambu_dds@fadel-lang.test)
+2025-09-24 17:22:18.006 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:18.016 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:18.019 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:18.032 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:18.036 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:18.038 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:18.049 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:18.187 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Adityanandana Mehrotra (adityanandana_mehrotra@kozey.example)
+2025-09-24 17:22:18.201 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:18.201 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:18.216 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:18.216 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:18.216 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:18.228 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:18.228 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:18.228 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Anish Shah (anish_shah@cremin.example)
+2025-09-24 17:22:18.228 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:18.228 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:18.244 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:18.244 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:18.259 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:18.342 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:18.344 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:18.345 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Miss Jagdeep Bhattacharya (bhattacharya_miss_jagdeep@kunze.example)
+2025-09-24 17:22:18.346 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:18.348 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:18.352 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:18.497 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:18.612 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:18.629 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:18.677 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:18.677 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Tej Malik (malik_tej@rowe.example)
+2025-09-24 17:22:18.814 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:18.824 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:18.832 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:18.832 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:18.832 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:18.852 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:18.852 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:18.852 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Trisha Marar (trisha_marar@deckow-cartwright.example)
+2025-09-24 17:22:18.872 DEBUG testcase.TC_Sample Producer Test         - 1: expected = expectedUsers[i]
+2025-09-24 17:22:18.872 DEBUG testcase.TC_Sample Producer Test         - 2: actual = actualUsers.find({ -> ... })
+2025-09-24 17:22:18.883 DEBUG testcase.TC_Sample Producer Test         - 3: assert actual != null
+2025-09-24 17:22:18.883 DEBUG testcase.TC_Sample Producer Test         - 4: assert name == name
+2025-09-24 17:22:19.011 DEBUG testcase.TC_Sample Producer Test         - 5: assert email == email
+2025-09-24 17:22:19.011 DEBUG testcase.TC_Sample Producer Test         - 6: assert gender == gender
+2025-09-24 17:22:19.011 DEBUG testcase.TC_Sample Producer Test         - 7: assert status == status
+2025-09-24 17:22:19.011 DEBUG testcase.TC_Sample Producer Test         - 8: println(Verified user: $expected.name ($expected.email))
+Verified user: Durga Johar (johar_durga@olson.example)
+2025-09-24 17:22:19.147 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC API/TC_Sample Producer Test
+2025-09-24 17:22:19.367 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2025-09-24 17:22:19.369 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI
+2025-09-24 17:22:20.744 ERROR c.k.katalon.core.main.TestCaseExecutor   - ❌ Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 4: unable to resolve class org.apache.kafka.clients.consumer.KafkaConsumer
+ @ line 4, column 1.
+   import org.apache.kafka.clients.consumer.KafkaConsumer
+   ^
+
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 5: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecords
+ @ line 5, column 1.
+   import org.apache.kafka.clients.consumer.ConsumerRecords
+   ^
+
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 6: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecord
+ @ line 6, column 1.
+   import org.apache.kafka.clients.consumer.ConsumerRecord
+   ^
+
+3 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758709320062.run(TempTestSuite1758709320062.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2025-09-24 17:22:20.781 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI
+2025-09-24 17:22:20.944 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2025-09-24 17:22:20.944 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/API_Suite
+2025-09-24 17:22:20.948 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

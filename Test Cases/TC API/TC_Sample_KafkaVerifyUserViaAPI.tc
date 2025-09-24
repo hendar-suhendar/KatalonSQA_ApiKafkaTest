@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Sample_KafkaVerifyUserViaAPI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>36a0877a-9d1e-4950-a8eb-6d1da17233b9</testCaseGuid>
+</TestCaseEntity>

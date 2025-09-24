@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Kafka_Consumer_VerifyUser</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7f9a561c-6464-4b86-ac7f-f4a095452fcc</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,29 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+API_Suite,,,,24-09-2025 17:22:09,24-09-2025 17:22:20,11.939s,ERROR
+,,,,,,,
+Test Cases/TC API/TC_Sample Cunsomer Test,,,,24-09-2025 17:22:10,24-09-2025 17:22:15,5.130s,PASSED
+"DATA BINDING - {""(Default) email"":""tonny.wijaya.4721@mail.com"",""(Default) statu..."":""active"",""(Default) gende..."":""male"",""(Default) name"":""Tonny Wijaya""}",,,,,,,
+timestamp = System.currentTimeMillis(),,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.023s,PASSED
+"nameList = [""Tonny Wijaya"", ""Dewi Lestari"", ""Budi Santoso"", ""Siti Aminah""]",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.023s,PASSED
+"genderList = [""male"", ""female""]",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.019s,PASSED
+name = nameList[Random().nextInt(nameList.size())],,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.058s,PASSED
+gender = genderList[Random().nextInt(genderList.size())],,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.023s,PASSED
+"email = toLowerCase().replaceAll("" "", ""."") + ""."" + timestamp + ""@mail.com""",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.041s,PASSED
+"status = ""active""",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.011s,PASSED
+"payload = [""name"":name, ""gender"":gender, ""email"":email, ""status"":status]",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.004s,PASSED
+jsonBody = JsonOutput.toJson(payload),,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.139s,PASSED
+"postUserObj = findTestObject(""Object Repository/API_Endpoints/Post User"")",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.182s,PASSED
+"postUserObj.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(jsonBody, UTF-8, application/json))",,,,24-09-2025 17:22:12,24-09-2025 17:22:12,0.090s,PASSED
+response = sendRequest(postUserObj),,,,24-09-2025 17:22:12,24-09-2025 17:22:15,3.116s,PASSED
+"verifyResponseStatusCode(response, 201)",,,,24-09-2025 17:22:15,24-09-2025 17:22:15,0.027s,PASSED
+println(User created: $name | $email | $gender),,,,24-09-2025 17:22:15,24-09-2025 17:22:15,0.074s,PASSED
+,,,,,,,
+Test Cases/TC API/TC_Sample Producer Test,,,,24-09-2025 17:22:15,24-09-2025 17:22:19,3.165s,PASSED
+"getUserObj = findTestObject(""Object Repository/API_Endpoints/List User"")",,,,24-09-2025 17:22:16,24-09-2025 17:22:16,0.272s,PASSED
+response = sendRequest(getUserObj),,,,24-09-2025 17:22:16,24-09-2025 17:22:17,0.232s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,24-09-2025 17:22:17,24-09-2025 17:22:17,0.030s,PASSED
+actualUsers = JsonSlurper().parseText(response.getResponseText()),,,,24-09-2025 17:22:17,24-09-2025 17:22:17,0.045s,PASSED
+"expectedUsers = [[""id"":8145378, ""name"":""Rep. Tejas Kaniyar"", ""email"":""rep_kaniyar_tejas@legros.example"", ""gender"":""male"", ""status"":""inactive""], [""id"":8145377, ""name"":""Shwet Devar"", ""email"":""devar_shwet@schaden.test"", ""gender"":""female"", ""status"":""active""], [""id"":8145376, ""name"":""Rakesh Bhattacharya PhD"", ""email"":""bhattacharya_phd_rakesh@kunde-runolfsdottir.test"", ""gender"":""male"", ... ], [""id"":8145375, ""name"":""Amritambu Banerjee DDS"", ""email"":""banerjee_amritambu_dds@fadel-lang.test"", ""gender"":""female"", ""status"":""active""], [""id"":8145374, ""name"":""Adityanandana Mehrotra"", ""email"":""adityanandana_mehrotra@kozey.example"", ""gender"":""female"", ""status"":""active""], [""id"":8145373, ""name"":""Anish Shah"", ""email"":""anish_shah@cremin.example"", ""gender"":""female"", ""status"":""inactive""], [""id"":8145372, ""name"":""Miss Jagdeep Bhattacharya"", ""email"":""bhattacharya_miss_jagdeep@kunze.example"", ""gender"":""female"", ""status"":""inactive""], [""id"":8145371, ""name"":""Tej Malik"", ""email"":""malik_tej@rowe.example"", ""gender"":""male"", ""status"":""inactive""], [""id"":8145370, ""name"":""Trisha Marar"", ""email"":""trisha_marar@deckow-cartwright.example"", ""gender"":""male"", ""status"":""inactive""], [""id"":8145369, ""name"":""Durga Johar"", ""email"":""johar_durga@olson.example"", ""gender"":""male"", ""status"":""active""]]",,,,24-09-2025 17:22:17,24-09-2025 17:22:17,0.006s,PASSED
+"for ([i = 0, i < expectedUsers.size(), (i++)])",,,,24-09-2025 17:22:17,24-09-2025 17:22:19,2.044s,PASSED
+,,,,,,,
+Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI,,,,24-09-2025 17:22:19,24-09-2025 17:22:20,1.408s,ERROR

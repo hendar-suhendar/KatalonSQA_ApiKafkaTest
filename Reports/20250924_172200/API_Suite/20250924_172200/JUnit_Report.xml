@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="API_Suite" time="11.772" tests="3" failures="0" errors="1">
+   <testsuite name="API_Suite" tests="3" failures="0" errors="1" time="11.772" skipped="0" timestamp="2025-09-24T10:22:09.009Z" hostname="Suhendar-PC - DESKTOP-0GKMVGL" id="Test Suites/API_Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\Suhendar-PC\\Katalon Studio\\KatalonSQA_ApiKafkaTest\\Reports\\20250924_172200\\API_Suite\\20250924_172200"/>
+         <property name="logFiles" value="C:\\Users\\Suhendar-PC\\Katalon Studio\\KatalonSQA_ApiKafkaTest\\Reports\\20250924_172200\\API_Suite\\20250924_172200\\console0.log, C:\\Users\\Suhendar-PC\\Katalon Studio\\KatalonSQA_ApiKafkaTest\\Reports\\20250924_172200\\API_Suite\\20250924_172200\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="suhendar"/>
+         <property name="hostName" value="Suhendar-PC - DESKTOP-0GKMVGL"/>
+         <property name="hostAddress" value="192.168.1.5"/>
+         <property name="projectName" value="KatalonSQA_ApiKafkaTest"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.3.0.0"/>
+      </properties>
+      <testcase name="Test Cases/TC API/TC_Sample Cunsomer Test" time="5.13" classname="Test Cases/TC API/TC_Sample Cunsomer Test" status="PASSED">
+         <properties>
+            <property name="data_binding"><![CDATA[{"(Default) email":"tonny.wijaya.4721@mail.com","(Default) statu...":"active","(Default) gende...":"male","(Default) name":"Tonny Wijaya"}]]></property>
+         </properties>
+         <system-out><![CDATA[24-09-2025T17:22:10 - [TEST_CASE][PASSED] - Test Cases/TC API/TC_Sample Cunsomer Test: Test Cases/TC API/TC_Sample Cunsomer Test
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - timestamp = System.currentTimeMillis(): null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - nameList = ["Tonny Wijaya", "Dewi Lestari", "Budi Santoso", "Siti Aminah"]: null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - genderList = ["male", "female"]: null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - name = nameList[Random().nextInt(nameList.size())]: null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - gender = genderList[Random().nextInt(genderList.size())]: null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - email = toLowerCase().replaceAll(" ", ".") + "." + timestamp + "@mail.com": null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - status = "active": null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - payload = ["name":name, "gender":gender, "email":email, "status":status]: null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - jsonBody = JsonOutput.toJson(payload): null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - postUserObj = findTestObject("Object Repository/API_Endpoints/Post User"): null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - postUserObj.setBodyContent(new com.kms.katalon.core.testobject.impl.HttpTextBodyContent(jsonBody, UTF-8, application/json)): null
+
+24-09-2025T17:22:12 - [TEST_STEP][PASSED] - response = sendRequest(postUserObj): Send request successfully
+
+24-09-2025T17:22:15 - [MESSAGE][INFO] - HAR: C:\Users\Suhendar-PC\Katalon Studio\KatalonSQA_ApiKafkaTest\Reports\20250924_172200\API_Suite\20250924_172200\requests\main\Post-User_0.har
+
+24-09-2025T17:22:15 - [MESSAGE][PASSED] - Send request successfully
+
+24-09-2025T17:22:15 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 201): Verify response status code successfully
+
+24-09-2025T17:22:15 - [MESSAGE][PASSED] - Verify response status code successfully
+
+24-09-2025T17:22:15 - [TEST_STEP][PASSED] - println(User created: $name | $email | $gender): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC API/TC_Sample Producer Test" time="3.165" classname="Test Cases/TC API/TC_Sample Producer Test" status="PASSED">
+         <system-out><![CDATA[24-09-2025T17:22:15 - [TEST_CASE][PASSED] - Test Cases/TC API/TC_Sample Producer Test: Test Cases/TC API/TC_Sample Producer Test
+
+24-09-2025T17:22:16 - [TEST_STEP][PASSED] - getUserObj = findTestObject("Object Repository/API_Endpoints/List User"): null
+
+24-09-2025T17:22:16 - [TEST_STEP][PASSED] - response = sendRequest(getUserObj): Send request successfully
+
+24-09-2025T17:22:16 - [MESSAGE][INFO] - HAR: C:\Users\Suhendar-PC\Katalon Studio\KatalonSQA_ApiKafkaTest\Reports\20250924_172200\API_Suite\20250924_172200\requests\main\List-User_1.har
+
+24-09-2025T17:22:17 - [MESSAGE][PASSED] - Send request successfully
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+24-09-2025T17:22:17 - [MESSAGE][PASSED] - Verify response status code successfully
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - actualUsers = JsonSlurper().parseText(response.getResponseText()): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - expectedUsers = [["id":8145378, "name":"Rep. Tejas Kaniyar", "email":"rep_kaniyar_tejas@legros.example", "gender":"male", "status":"inactive"], ["id":8145377, "name":"Shwet Devar", "email":"devar_shwet@schaden.test", "gender":"female", "status":"active"], ["id":8145376, "name":"Rakesh Bhattacharya PhD", "email":"bhattacharya_phd_rakesh@kunde-runolfsdottir.test", "gender":"male", ... ], ["id":8145375, "name":"Amritambu Banerjee DDS", "email":"banerjee_amritambu_dds@fadel-lang.test", "gender":"female", "status":"active"], ["id":8145374, "name":"Adityanandana Mehrotra", "email":"adityanandana_mehrotra@kozey.example", "gender":"female", "status":"active"], ["id":8145373, "name":"Anish Shah", "email":"anish_shah@cremin.example", "gender":"female", "status":"inactive"], ["id":8145372, "name":"Miss Jagdeep Bhattacharya", "email":"bhattacharya_miss_jagdeep@kunze.example", "gender":"female", "status":"inactive"], ["id":8145371, "name":"Tej Malik", "email":"malik_tej@rowe.example", "gender":"male", "status":"inactive"], ["id":8145370, "name":"Trisha Marar", "email":"trisha_marar@deckow-cartwright.example", "gender":"male", "status":"inactive"], ["id":8145369, "name":"Durga Johar", "email":"johar_durga@olson.example", "gender":"male", "status":"active"]]: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - for ([i = 0, i < expectedUsers.size(), (i++)]): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:17 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - expected = expectedUsers[i]: null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - actual = actualUsers.find({ -> ... }): null
+
+24-09-2025T17:22:18 - [TEST_STEP][PASSED] - assert actual != null: null
+
+24-09-2025T17:22:19 - [TEST_STEP][PASSED] - assert name == name: null
+
+24-09-2025T17:22:19 - [TEST_STEP][PASSED] - assert email == email: null
+
+24-09-2025T17:22:19 - [TEST_STEP][PASSED] - assert gender == gender: null
+
+24-09-2025T17:22:19 - [TEST_STEP][PASSED] - assert status == status: null
+
+24-09-2025T17:22:19 - [TEST_STEP][PASSED] - println(Verified user: $expected.name ($expected.email)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI" time="1.408" classname="Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI" status="ERROR">
+         <error type="ERROR" message="Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI FAILED.&#xa;Reason:&#xa;org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:&#xa;file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 4: unable to resolve class org.apache.kafka.clients.consumer.KafkaConsumer&#xa; @ line 4, column 1.&#xa;   import org.apache.kafka.clients.consumer.KafkaConsumer&#xa;   ^&#xa;&#xa;file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 5: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecords&#xa; @ line 5, column 1.&#xa;   import org.apache.kafka.clients.consumer.ConsumerRecords&#xa;   ^&#xa;&#xa;file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 6: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecord&#xa; @ line 6, column 1.&#xa;   import org.apache.kafka.clients.consumer.ConsumerRecord&#xa;   ^&#xa;&#xa;3 errors&#xa;&#xa;	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)&#xa;	at TempTestSuite1758709320062.run(TempTestSuite1758709320062.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[24-09-2025T17:22:19 - [TEST_CASE][ERROR] - Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI: Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 4: unable to resolve class org.apache.kafka.clients.consumer.KafkaConsumer
+ @ line 4, column 1.
+   import org.apache.kafka.clients.consumer.KafkaConsumer
+   ^
+
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 5: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecords
+ @ line 5, column 1.
+   import org.apache.kafka.clients.consumer.ConsumerRecords
+   ^
+
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 6: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecord
+ @ line 6, column 1.
+   import org.apache.kafka.clients.consumer.ConsumerRecord
+   ^
+
+3 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758709320062.run(TempTestSuite1758709320062.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+         <system-err><![CDATA[24-09-2025T17:22:19 - [TEST_CASE][ERROR] - Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI: Test Cases/TC API/TC_Sample_KafkaVerifyUserViaAPI FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 4: unable to resolve class org.apache.kafka.clients.consumer.KafkaConsumer
+ @ line 4, column 1.
+   import org.apache.kafka.clients.consumer.KafkaConsumer
+   ^
+
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 5: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecords
+ @ line 5, column 1.
+   import org.apache.kafka.clients.consumer.ConsumerRecords
+   ^
+
+file:/C:/Users/Suhendar-PC/Katalon%20Studio/KatalonSQA_ApiKafkaTest/Scripts/TC%20API/TC_Sample_KafkaVerifyUserViaAPI/Script1758708913966.groovy: 6: unable to resolve class org.apache.kafka.clients.consumer.ConsumerRecord
+ @ line 6, column 1.
+   import org.apache.kafka.clients.consumer.ConsumerRecord
+   ^
+
+3 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:486)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:477)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:456)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:145)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:104)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:205)
+	at TempTestSuite1758709320062.run(TempTestSuite1758709320062.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[24-09-2025T17:22:09 - [TEST_SUITE][ERROR] - API_Suite: null]]></system-out>
+      <system-err><![CDATA[24-09-2025T17:22:09 - [TEST_SUITE][ERROR] - API_Suite: null]]></system-err>
+   </testsuite>
+</testsuites>

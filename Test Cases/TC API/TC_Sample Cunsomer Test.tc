@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Sample Cunsomer Test</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ced20bc9-8850-4403-bcc3-796c9d0407d2</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5316d5c7-a475-4151-abad-a39dc1ce10c4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7f8e2c1a-9b3e-4b2d-9c2a-1d3c4e5f6a7b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c9a1f2b3-4d5e-6f7a-8b9c-0d1e2f3a4b5c</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e1f2a3b4-c5d6-7890-abcd-1234567890ef</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'Tonny Wijaya'</defaultValue>
+      <description>Nama lengkap user</description>
+      <id>5316d5c7-a475-4151-abad-a39dc1ce10c4</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'male'</defaultValue>
+      <description>Jenis kelamin user</description>
+      <id>7f8e2c1a-9b3e-4b2d-9c2a-1d3c4e5f6a7b</id>
+      <masked>false</masked>
+      <name>gender</name>
+   </variable>
+   <variable>
+      <defaultValue>'tonny.wijaya.4721@mail.com'</defaultValue>
+      <description>Email unik user</description>
+      <id>c9a1f2b3-4d5e-6f7a-8b9c-0d1e2f3a4b5c</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+   <variable>
+      <defaultValue>'active'</defaultValue>
+      <description>Status akun user</description>
+      <id>e1f2a3b4-c5d6-7890-abcd-1234567890ef</id>
+      <masked>false</masked>
+      <name>status</name>
+   </variable>
+</TestCaseEntity>

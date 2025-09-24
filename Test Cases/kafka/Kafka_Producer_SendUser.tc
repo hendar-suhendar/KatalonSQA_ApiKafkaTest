@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Kafka_Producer_SendUser</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a4590559-6a6c-4f7d-84d8-acb7d7c8dd94</testCaseGuid>
+</TestCaseEntity>
