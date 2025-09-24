@@ -4,11 +4,6 @@ Project ini berisi pengujian otomatis menggunakan Katalon Studio:
 (-) Restful API : Sebagai producer dan consumer  
 (-) Kafka : Sebagai consumer
 
-## Structure
-(-) Test Cases : Berisi skrip pengujian  
-(-) Test Suites : Untuk menjalankan test secara otomatis  
-(-) Object Repository : Menyimpan endpoints
-
 ## Pre Conditions
 Sebelum menjalankan Test Suite, pastikan koneksi ke API dan Kafka aktif
 
