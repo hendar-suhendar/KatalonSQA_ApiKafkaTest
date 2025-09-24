@@ -12,8 +12,3 @@ Sebelum menjalankan Test Suite, pastikan koneksi ke API dan Kafka aktif
 Lihat laporan PDF
 </a>
 
-
-
-
-## Author
-Suhendar - SQA
