@@ -7,14 +7,14 @@ import org.apache.kafka.clients.consumer.ConsumerRecord
 import java.util.Properties
 import java.time.Duration
 
-// 🔹 Step 1: Ambil data dari API
+// Step 1: Ambil data dari API
 def getUserObj = findTestObject('API_Endpoints/List User')
 def response = WS.sendRequest(getUserObj)
 WS.verifyResponseStatusCode(response, 200)
 
 def actualUsers = new JsonSlurper().parseText(response.getResponseText())
 
-// 🔹 Step 2: Ambil data dari Kafka atau gunakan mock
+// Step 2: Ambil data dari Kafka atau gunakan mock
 def useKafka = false // ubah ke true jika Kafka tersedia
 def kafkaUsers = []
 
@@ -36,7 +36,7 @@ if (useKafka) {
     }
     consumer.close()
 } else {
-    // 🔹 Simulasi Kafka data
+    // Simulasi Kafka data
     kafkaUsers = [
         [id:8145378, name:"Rep. Tejas Kaniyar", email:"rep_kaniyar_tejas@legros.example", gender:"male", status:"inactive"],
         [id:8145377, name:"Shwet Devar", email:"devar_shwet@schaden.test", gender:"female", status:"active"],
@@ -51,7 +51,7 @@ if (useKafka) {
     ]
 }
 
-// 🔹 Step 3: Verifikasi Kafka ke API
+// Step 3: Verifikasi Kafka ke API
 for (def expected : kafkaUsers) {
     def actual = actualUsers.find { it.id == expected.id }
 
